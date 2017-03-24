@@ -22,9 +22,9 @@ label {
     padding: 0 1.5em 1.5em 1.5em;
 }
 
-.mat-menu-content
+.mat-menu-content 
 {
     background: white !important;
-    margin-right: 50px;
+    margin-right: 100px;
     width: 200px;
 }
