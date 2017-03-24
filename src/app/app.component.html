@@ -1,10 +1,10 @@
 <md-toolbar color="primary">
     <span>{{title}}</span>
     <span class="spacer"></span>
-    <button md-icon-button [mdMenuTriggerFor]="menu">
+    <button md-icon-button [mdMenuTriggerFor]="menu" >
       <md-icon>more_vert</md-icon>
     </button>
-      <md-menu #menu="mdMenu">
+      <md-menu #menu="mdMenu"  [overlapTrigger]="false">
       <button md-menu-item>
         <md-icon>fingerprint</md-icon>
         <span>Login</span>
