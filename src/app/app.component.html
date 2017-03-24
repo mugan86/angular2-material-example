@@ -4,7 +4,7 @@
     <button md-icon-button [mdMenuTriggerFor]="menu" >
       <md-icon>more_vert</md-icon>
     </button>
-      <md-menu #menu="mdMenu"  [overlapTrigger]="false">
+      <md-menu #menu="mdMenu"  [overlapTrigger]="false" [classList]="'submenu'">
       <button md-menu-item>
         <md-icon>fingerprint</md-icon>
         <span>Login</span>
