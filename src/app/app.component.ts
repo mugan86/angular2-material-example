@@ -12,6 +12,13 @@ import 'rxjs/add/operator/startWith';
 })
 export class AppComponent {
   title = 'Angular Material Example';
+
+  //Checkbox
+  checked = false;
+  indeterminate = false;
+  align = 'start';
+  disabled = false;
+  
   spaceScreens: Array<any>;
 
   stateCtrl: FormControl;
