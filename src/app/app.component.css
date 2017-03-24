@@ -21,3 +21,10 @@ label {
 #page-padding {
     padding: 0 1.5em 1.5em 1.5em;
 }
+
+.mat-menu-content
+{
+    background: white !important;
+    margin-right: 50px;
+    width: 200px;
+}
