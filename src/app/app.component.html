@@ -44,7 +44,12 @@
       <md-slider
           showTicks="true" max="100" min="0" step="1" thumbLabel="true" value="18">
       </md-slider>
-      <md-slide-toggle>Some setting</md-slide-toggle>
+      <md-slide-toggle>Some setting</md-slide-toggle><br/>
+      <label>Select Example</label>
+      <md-select placeholder="State">
+        <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
+      </md-select>
     </div>
+    
   </md-tab>
 </md-tab-group>
