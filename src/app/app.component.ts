@@ -18,4 +18,18 @@ export class AppComponent {
       .subscribe(res => this.spaceScreens = res);
 
   }
+
+  likeMe(i) {
+    if (this.spaceScreens[i].liked == 0)
+      this.spaceScreens[i].liked = 1;
+    else
+      this.spaceScreens[i].liked = 0;
+    
+    console.log(this.spaceScreens[i].liked);
+  }
+
+  deleteMe(i) {
+    this.spaceScreens.splice(i,1);
+    console.log(i);
+  }
 }
