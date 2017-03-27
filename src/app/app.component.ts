@@ -38,6 +38,14 @@ export class AppComponent {
     {code: 'DE', name: 'Delaware'}
   ];
 
+  languages = [
+    {code: 'en' , label: 'English'},
+    {code: 'es' , label: 'Español'},
+    {code: 'eu' , label: 'Euskara'}
+  ]
+
+  language: string = localStorage.getItem('selectLanguage');
+
   constructor(private http:Http, private translate:TranslateService) {
     console.info("Select language: " + localStorage.getItem('selectLanguage'));
     if (localStorage.getItem('selectLanguage') == null || localStorage.getItem('selectLanguage') == "null")
@@ -45,8 +53,9 @@ export class AppComponent {
       localStorage.setItem('selectLanguage', 'en');
       console.info("Change language to " + localStorage.getItem('selectLanguage'));
     }
+
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
-    
+
     this.http.get('./src/data.json')
       .map(response => response.json().screenshots)
       .subscribe(res => this.spaceScreens = res);
@@ -66,5 +75,12 @@ export class AppComponent {
   deleteMe(i) {
     this.spaceScreens.splice(i,1);
     console.log(i);
+  }
+
+  //Select language action with radio button
+
+  changeLanguage(lang)
+  {
+    localStorage.setItem('selectLanguage', lang);
   }
 }
