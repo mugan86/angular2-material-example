@@ -1,3 +1,10 @@
 {
-	"TITLE": "Material-Theme Example :)"
+	"TITLE": "Material-Theme Example :)",
+    "GALLERY": "Gallery",
+    "SETTINGS": "Settings",
+    "LIKE": "LIKE",
+    "DELETE": "DELETE",
+    "BASQUE": "Euskara",
+    "SPANISH": "Español",
+    "ENGLISH": "English"
 }

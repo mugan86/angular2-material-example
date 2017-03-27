@@ -1,3 +1,10 @@
 {
-	"TITLE": "Material-Theme adibidea :)"
+	"TITLE": "Material-Theme adibidea :)",
+    "GALLERY": "Gallery",
+    "SETTINGS": "Settings",
+    "LIKE": "LIKE",
+    "DELETE": "DELETE",
+    "BASQUE": "Euskara",
+    "SPANISH": "Español",
+    "ENGLISH": "English"
 }
