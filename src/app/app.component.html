@@ -20,7 +20,7 @@
     </md-menu>
 </md-toolbar>
 <md-tab-group>
-  <md-tab label="Gallery">
+  <md-tab label="{{ 'GALLERY' | translate }}">
     <md-card *ngFor="let spaceScreen of spaceScreens; let i = index">
       <img md-card-image src="{{ spaceScreen.img }}">
       <md-card-content>
@@ -36,7 +36,7 @@
       </md-card-actions>
     </md-card>
   </md-tab>
-  <md-tab label="Settings">
+  <md-tab label="{{ 'SETTINGS' | translate }}">
      <div id="page-padding">
       <h1>Settings</h1>
       <p>Here you can control the various settings associated with your app. There's no need to hit a save button, as the values are updated automatically.</p>
