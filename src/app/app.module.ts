@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {MaterialModule} from '@angular/material';
 
+import { TranslateModule, TranslateLoader  } from 'ng2-translate/ng2-translate';
+import { createTranslateLoader } from './translate-loader';
+import { Http } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import 'hammerjs';
@@ -17,7 +20,12 @@ import 'hammerjs';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
