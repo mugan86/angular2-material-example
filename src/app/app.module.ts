@@ -12,12 +12,13 @@ import { Http } from '@angular/http';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { PopUpMenuComponent } from './components/pop-up-menu/pop-up-menu.component';
 import 'hammerjs';
 
 
 @NgModule({
   declarations: [
-    AppComponent, GalleryComponent, SettingsComponent
+    AppComponent, GalleryComponent, SettingsComponent, PopUpMenuComponent
   ],
   imports: [
     BrowserModule,
