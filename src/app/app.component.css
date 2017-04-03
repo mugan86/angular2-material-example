@@ -28,7 +28,7 @@ label {
     width: 200px;
 }
 
-.mat-toolbar.mat-primary, .mat-ink-bar
+.mat-toolbar.mat-primary, .mat-ink-bar /*Tab down border*/
 {
     background: turquoise
 }
