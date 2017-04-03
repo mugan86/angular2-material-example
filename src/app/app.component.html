@@ -27,8 +27,8 @@
      <div id="page-padding">
       <h1>Settings</h1>
       <p></p>
-      <md-radio-group>
-        <md-radio-button *ngFor="let lang of languages" [value]="lang.code"  >{{lang.label}}</md-radio-button>
+      <md-radio-group [(ngModel)]="language" (ngModelChange)="changeLanguage($event)">
+        <md-radio-button *ngFor="let lang of languages"   [value]="lang.code"  >{{lang.label}}</md-radio-button>
         <!--<md-radio-button [(ngModel)]="language" (ngModelChange)="changeLanguage($event)"value="es">Option 2</md-radio-button>-->
       </md-radio-group>
       <p>Here you can control the various settings associated with your app. There's no need to hit a save button, as the values are updated automatically.</p>
