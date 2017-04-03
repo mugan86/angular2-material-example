@@ -27,3 +27,8 @@ label {
     background: white !important;   
     width: 200px;
 }
+
+.mat-toolbar.mat-primary, .mat-ink-bar
+{
+    background: turquoise
+}
