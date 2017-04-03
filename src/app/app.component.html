@@ -21,20 +21,7 @@
 </md-toolbar>
 <md-tab-group>
   <md-tab label="{{ 'GALLERY' | translate | uppercase}}">
-    <md-card *ngFor="let spaceScreen of spaceScreens; let i = index">
-      <img md-card-image src="{{ spaceScreen.img }}">
-      <md-card-content>
-        <p>{{ spaceScreen.description }}</p>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button (click)="likeMe(i)">
-            <i class="material-icons md-18" [class.red-color]="spaceScreen.liked == '1'">favorite</i>  {{'LIKE' | translate}}
-        </button>
-        <button md-button (click)="deleteMe(i)">
-            <i class="material-icons md-18">delete</i> {{'DELETE' | translate}} 
-        </button>
-      </md-card-actions>
-    </md-card>
+    <gallery></gallery>
   </md-tab>
   <md-tab label="{{ 'SETTINGS' | translate | uppercase}}">
      <div id="page-padding">
