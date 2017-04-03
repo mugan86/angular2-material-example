@@ -1,0 +1,16 @@
+{
+  "menuitems": [
+      {
+        "icon": "build",
+        "text": "Menu 1"
+      },
+       {
+        "icon": "book",
+        "text": "Menu 2"
+      },
+       {
+        "icon": "book",
+        "text": "Menu 3"
+      }
+  ]
+}
