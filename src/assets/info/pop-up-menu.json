@@ -9,8 +9,20 @@
         "text": "Menu 2"
       },
        {
-        "icon": "book",
+        "icon": "accessibility",
         "text": "Menu 3"
+      },
+      {
+        "icon": "android",
+        "text": "Menu 4"
+      },
+      {
+        "icon": "update",
+        "text": "Menu 5"
+      },
+      {
+        "icon": "done",
+        "text": "Menu 6"
       }
   ]
 }
