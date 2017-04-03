@@ -8,7 +8,7 @@ import {TranslateService} from 'ng2-translate';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+  title: string = "Material Example";
   menuItems : any;
   language: string = localStorage.getItem('selectLanguage');
 
