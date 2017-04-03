@@ -11,12 +11,13 @@ import { Http } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { SettingsComponent } from './components/settings/settings.component';
 import 'hammerjs';
 
 
 @NgModule({
   declarations: [
-    AppComponent, GalleryComponent
+    AppComponent, GalleryComponent, SettingsComponent
   ],
   imports: [
     BrowserModule,
