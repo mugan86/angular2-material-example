@@ -1,23 +1,26 @@
 <md-toolbar color="primary">
     <span>{{title}}</span>
     <span class="spacer"></span>
+    
     <button md-icon-button [mdMenuTriggerFor]="menu" >
       <md-icon>more_vert</md-icon>
     </button>
-      <md-menu #menu="mdMenu"  [overlapTrigger]="false" [classList]="'submenu'">
-      <button md-menu-item>
-        <md-icon>fingerprint</md-icon>
-        <span>Login</span>
-      </button>
-      <button md-menu-item disabled>
+    <md-menu #menu="mdMenu"  [overlapTrigger]="false" [classList]="'submenu'">
+    <button md-menu-item *ngFor="let item of menuItems; let i = index">
+        <md-icon>{{item.icon}}</md-icon>
+        <span>{{item.text}}</span>
+    </button>
+    <button md-menu-item disabled>
         <md-icon>announcement</md-icon>
         <span>Issues</span>
-      </button>
-      <button md-menu-item>
+    </button>
+    <button md-menu-item>
         <md-icon>notifications_off</md-icon>
         <span>Disable alerts</span>
-      </button>
-    </md-menu>
+    </button>
+</md-menu>
+    
+     
 </md-toolbar>
 <md-tab-group>
   <md-tab label="{{ 'GALLERY' | translate | uppercase}}">

@@ -9,7 +9,7 @@ import {TranslateService} from 'ng2-translate';
 })
 export class AppComponent {
  
-
+  menuItems : any;
   language: string = localStorage.getItem('selectLanguage');
 
   constructor(private http:Http, private translate:TranslateService) {
@@ -21,6 +21,10 @@ export class AppComponent {
     }
 
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
+
+    this.http.get('./src/assets/info/pop-up-menu.json')
+      .map(response => response.json().menuitems)
+      .subscribe(res => this.menuItems = res);
   }
 
 
