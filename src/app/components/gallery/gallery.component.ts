@@ -22,7 +22,7 @@ export class GalleryComponent {
 
     translate.setDefaultLang(localStorage.getItem('selectLanguage'));
 
-    this.http.get('./src/data.json')
+    this.http.get('./src/assets/info/data.json')
       .map(response => response.json().screenshots)
       .subscribe(res => this.spaceScreens = res);
   }
