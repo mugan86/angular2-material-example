@@ -1,0 +1,59 @@
+<div id="page-padding">
+      <h1>Settings</h1>
+      <p></p>
+      <md-radio-group [(ngModel)]="language" (ngModelChange)="changeLanguage($event)">
+        <md-radio-button *ngFor="let lang of languages"   [value]="lang.code"  >{{lang.label}}</md-radio-button>
+        <!--<md-radio-button [(ngModel)]="language" (ngModelChange)="changeLanguage($event)"value="es">Option 2</md-radio-button>-->
+      </md-radio-group>
+      <p>Here you can control the various settings associated with your app. There's no need to hit a save button, as the values are updated automatically.</p>
+      <label>Number of Thumbnails</label>
+      <md-slider
+          showTicks="true" max="100" min="0" step="1" thumbLabel="true" value="18">
+      </md-slider>
+      <md-slide-toggle>Some setting</md-slide-toggle><br/>
+      <label>Select Example</label>
+      <md-select placeholder="State">
+        <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
+      </md-select>
+      <md-card>
+      <md-card-content>
+        <h2 class="example-h2">Checkbox configuration</h2>
+
+        <section class="example-section">
+          <md-checkbox class="example-margin" [(ngModel)]="checked">Checked</md-checkbox>
+          <md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Align:</label>
+          <md-radio-group [(ngModel)]="align">
+            <md-radio-button class="example-margin" value="start">Start</md-radio-button>
+            <md-radio-button class="example-margin" value="end">End</md-radio-button>
+          </md-radio-group>
+        </section>
+
+        <section class="example-section">
+          <md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+        </section>
+      </md-card-content>
+    </md-card>
+
+    <md-card class="result">
+      <md-card-content>
+        <h2 class="example-h2">Result</h2>
+
+        <section class="example-section">
+          <md-checkbox
+              class="example-margin"
+              [checked]="checked"
+              [indeterminate]="indeterminate"
+              [align]="align"
+              [disabled]="disabled">
+            I'm a checkbox
+          </md-checkbox>
+        </section>
+      </md-card-content>
+    </md-card>
+
+    </div>
+    
